@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<xsd:schema
+    xmlns="http://schema.morpc.com/morpc/schema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    targetNamespace="http://schema.morpc.com/morpc/schema"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+
+    <xsd:import namespace="http://www.springframework.org/schema/beans"/>
+
+    <!-- reference -->
+    <xsd:element name="reference" type="Treference"/>
+    <xsd:complexType name="Treference">
+        <xsd:complexContent>
+            <xsd:extension base="beans:identifiedType">
+                <xsd:attribute name="timeout" type="xsd:integer" use="optional"/>
+                <xsd:attribute name="interface" type="xsd:string" use="required"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <!-- service -->
+    <xsd:element name="service" type="Tservice"/>
+    <xsd:complexType name="Tservice">
+        <xsd:complexContent>
+            <xsd:extension base="beans:identifiedType">
+                <xsd:attribute name="ref" type="xsd:string" use="required"/>
+                <xsd:attribute name="interface" type="xsd:string" use="required"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+</xsd:schema>

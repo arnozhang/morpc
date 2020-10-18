@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:morpc="http://schema.morpc.com/morpc/schema"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://schema.morpc.com/morpc/schema http://schema.morpc.com/morpc/schema-1-0-0.xsd"
+       default-autowire="byName">
+
+    <morpc:reference
+        interface="com.morpc.demo.service.declare.list.DemoBeansListService"
+        id="demoBeansListServiceRef"/>
+
+</beans>
+
